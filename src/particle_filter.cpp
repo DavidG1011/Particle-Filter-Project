@@ -32,9 +32,9 @@ void ParticleFilter::init(double x, double y, double theta, double std[])
     // Init particle vector
     Particle pInit;
 
-
-    // Potentially bad estimate: modify if needed.
-    num_particles = 100;
+    // Potentially bad estimate: modify if slow (too high) / inaccurate (too low).
+    // Diminishing returns at high values-- 1000 particles isn't much more accurate than 150~
+    num_particles = 150;
 
     // Init random gen
     default_random_engine gen;
