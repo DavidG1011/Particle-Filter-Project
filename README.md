@@ -76,7 +76,7 @@ OUTPUT: values provided by the c++ program to the simulator
 ["best_particle_sense_y"] <= list of sensed y positions
 
 
-A successful implementation of a particle filter outputs the following in the simulator:
+Implementing a successful particle filter will output the following in the simulator:
 
 ```
 Success! Your particle filter passed!
