@@ -170,13 +170,6 @@ void ParticleFilter::updateWeights(double sensor_range, double std_landmark[],
             float m_y = map_landmarks.landmark_list[n2].y_f;
             int m_id = map_landmarks.landmark_list[n2].id_i;
 
-            // Check if distance from particle to landmark is in sensor range
-//            if (abs(m_x - px) <= sensor_range && abs(m_y - py) <= sensor_range)
-//                if (dist(px,py,m_x,m_y) <= sensor_range)
-//            {
-//                // Push back landmark position if in range of particle.
-//                inrangelm.push_back(LandmarkObs{m_id, m_x, m_y});
-//            }
             if (dist(m_x,m_y,px,py) <= sensor_range)
             {
                 inrangelm.push_back(LandmarkObs{m_id, m_x, m_y});
